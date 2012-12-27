@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+	<property>
+		<name>fs.default.name</name>
+		<value>hdfs://<%= @fs_default_name %>:8020</value>
+		<description>A URI whose scheme and authority determine the FileSystem implementation</description>
+	</property>
+
+	<property>
+		<name>hadoop.tmp.dir</name>
+		<value><%= @tmp_dir %></value>
+		<description>A base for other temporary directories</description>
+	</property>
+
+	<property>
+		<name>hadoop.logfile.size</name>
+		<value><%= @logfile_size %></value>
+		<description>The maximum size of each log file</description>
+	</property>
+
+	<property>
+		<name>hadoop.logfile.count</name>
+		<value><%= @logfile_count %></value>
+		<description>The maximum number of log file</description>
+	</property>
+
+	<property>
+		<name>topology.script.file.name</name>
+        <value><%= @topology_script_file_name %></value>
+	</property>
+</configuration>

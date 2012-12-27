@@ -1,0 +1,5 @@
+# Defines the hadoop cluster rack topology
+##########################################
+
+#example:
+#hadoop01          /zone01/rack01
