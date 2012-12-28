@@ -84,6 +84,20 @@ class hadoop::base::config(
     mode    => 644,
     content => template("${module_name}/etc/hadoop/conf/log4j.properties.erb"),
   }
+  file { "hadoop_topology.sh":
+    path    => "/etc/hadoop/conf/hadoop_topology.sh",
+    owner   => root,
+    group   => root,
+    mode    => 755,
+    content => template("${module_name}/etc/hadoop/conf/hadoop_topology.sh.erb"),
+  }
+  file { "topology.data":
+    path    => "/etc/hadoop/conf/topology.data",
+    owner   => root,
+    group   => root,
+    mode    => 755,
+    content => template("${module_name}/etc/hadoop/conf/topology.data.erb"),
+  }
   class { "createvolumes":
     volumes       => $volumes
   }

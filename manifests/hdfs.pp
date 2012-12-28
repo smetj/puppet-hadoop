@@ -43,5 +43,5 @@ class hadoop::hdfs(
       secondarynamenode            => $secondarynamenode
     }
   
-    Class["hadoop::hdfs::packages"] -> Class["hadoop::hdfs::config"] -> Class ["hadoop::hdfs::service"]
+    Class["hadoop::hdfs::packages"] -> Class["hadoop::hdfs::config"] ~> Class ["hadoop::hdfs::service"]
 }
