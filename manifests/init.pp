@@ -1,2 +1,3 @@
 class hadoop{
+  include stdlib
 }
